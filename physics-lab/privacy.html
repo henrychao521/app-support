@@ -1,0 +1,57 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物理互動實驗室 隱私權政策</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right">繁體中文｜<a href="privacy-en.html">English</a></p><h1>「物理互動實驗室」App 隱私權政策</h1>
+<p class="meta">適用：iOS App「物理互動實驗室」（Physics Interactive Lab，Bundle ID: tw.livingtech.physicslab）　生效日期：2026 年 10 月 27 日　開發者：Henry Chao（個人）</p>
+<p>「物理互動實驗室」是為國高中生設計的物理互動實驗與模擬學習工具，收錄力學、熱學、波動、光學、電磁與近代物理六大展館的互動模擬，包含外科手術無影燈（3D 場景看本影／半影與照度熱圖、2D 剖面、選用 AR 桌面投影）、光的繞射與干涉（單狹縫、雙狹縫、光柵與波長調節）、摩爾紋（平行線、同心圓、點陣疊合旋轉附理論週期）等 3 個原生 3D/RealityKit 實驗、5 個支援麥克風與動作感測器實測之原生實驗（空氣柱共鳴管、都卜勒效應、簡諧運動、等速圓周運動、斜面），與內建的離線網頁模擬，以視覺化與互動呈現物理定律。</p>
+<p><strong>本 App 本身不連網、沒有伺服器，不需要註冊帳號，不收集、不上傳、不販售任何個人資料，也沒有廣告、分析或追蹤 SDK，不與第三方分享任何資料。App 內顯示之外部網址僅以純文字呈現，不具連網功能。</strong>以下逐項說明本 App 涉及的權限與資料處理方式。</p>
+
+<h2>總覽</h2>
+<table><tr><th>資料／項目</th><th>用途</th><th>會離開裝置嗎</th></tr>
+<tr><td>相機影像</td><td>在外科手術無影燈實驗的 AR 模式中偵測桌面並放置 3D 場景（選用功能）</td><td>不會（僅在裝置端即時處理，不拍照、不錄影、不儲存、不上傳）</td></tr>
+<tr><td>麥克風音訊</td><td>在「空氣柱共鳴管」與「都卜勒效應」實驗中按下「開始量測」時進行頻率分析（FFT）（選用功能）</td><td>不會（僅於記憶體即時分析，不錄音、不存檔、不上傳）</td></tr>
+<tr><td>動作感測器資料</td><td>在「簡諧運動」、「等速圓周運動」與「斜面」實驗中透過加速度計與陀螺儀進行實測</td><td>不會（僅於記憶體保留最近 12 秒，不存檔、不上傳）</td></tr>
+<tr><td>本機偏好與學習記錄</td><td>記錄收藏清單、最近開啟（最多 20 筆）、學習進度（開啟次數、停留秒數、操作次數）與介面設定</td><td>不會（僅以 UserDefaults 儲存在本機裝置）</td></tr>
+<tr><td>網頁快取資料</td><td>離線執行內建網頁互動模擬之暫存快取</td><td>不會（僅由系統 WebKit 保留在本機裝置）</td></tr>
+<tr><td>聲音播放</td><td>「聲波合成器」等模擬透過 Web Audio、都卜勒與共鳴管模擬音源透過系統音訊於裝置端即時合成聲音播放</td><td>不會（僅在裝置端即時合成發聲，無錄音功能）</td></tr></table>
+
+<h2>1. 相機權限與擴增實境（AR）</h2>
+<ul><li><strong>僅限 AR 模式主動請求</strong>：只有在外科手術無影燈實驗、具備 AR 支援的實機裝置上，且由使用者主動開啟 AR 模式時，App 才會向系統請求相機權限。</li>
+<li><strong>單純用途</strong>：相機影像僅用於即時偵測桌面平面並將無影燈 3D 場景投射於其上。</li>
+<li><strong>即時處理不儲存</strong>：所有相機影像僅在裝置端即時運算處理，App 不拍照、不錄影、不儲存任何影像，亦不會上傳任何內容至任何遠端伺服器。</li>
+<li><strong>選用功能</strong>：AR 為完全選用的功能，無影燈實驗提供完整的 3D 視角與 2D 剖面，其他模擬都不需要相機；拒絕相機權限完全不影響任何其他功能與模擬的正常使用。</li></ul>
+
+<h2>2. 麥克風權限、動作感測器與觸覺回饋</h2>
+<ul><li><strong>麥克風權限僅限量測主動請求</strong>：只有在「空氣柱共鳴管」與「都卜勒效應」兩個實驗中，使用者按下「開始量測」時，App 才會向系統請求麥克風權限。</li>
+<li><strong>即時頻率分析不錄音</strong>：聲音僅在裝置記憶體中即時進行頻率分析（FFT），App 不錄音、不儲存任何音訊檔案，亦不會上傳至任何伺服器。</li>
+<li><strong>提供模擬音源替代方案</strong>：麥克風為選用功能。若拒絕麥克風權限或裝置沒有麥克風，使用者可改用 App 內建的「模擬音源」，功能照樣能完整使用。</li>
+<li><strong>動作感測器（加速度計與陀螺儀）</strong>：「簡諧運動」、「等速圓周運動」與「斜面」三個實驗的「實測」功能使用裝置內建的加速度計與陀螺儀，系統不需要權限提示。資料僅在記憶體中保留最近 12 秒以供分析，不存檔、不上傳。</li>
+<li><strong>觸覺回饋</strong>：在量到週期或越過臨界角時提供輕微震動回饋，僅於裝置本機觸發。</li></ul>
+
+<h2>3. 存在裝置上的資料</h2>
+<p>本 App 所有資料均儲存於使用者的本機裝置中：</p>
+<ul><li><strong>本機偏好與進度</strong>：收藏清單、最近開啟記錄（最多 20 筆）、各館學習進度（開啟次數、停留秒數、操作次數）及介面偏好設定，儲存於裝置本機的 UserDefaults。</li>
+<li><strong>網頁模擬快取</strong>：內建的網頁模擬由系統 WebKit 在本機保留快取以供離線執行。</li></ul>
+<p>本 App 不使用 iCloud 雲端同步，亦無任何遠端資料庫或伺服器。所有本機資料均只保留在此裝置上，當您刪除 App 時，系統將一併完全刪除所有資料，開發者無法讀取或存取這些內容。</p>
+
+<h2>4. 網路連線、硬體權限與第三方服務</h2>
+<ul><li><strong>完全離線、無伺服器</strong>：本 App 所有模擬（包括原生實驗與網頁模擬）均已完整打包在 App 檔案內，離線即可完全執行，App 本身不連接網際網路，沒有任何後端伺服器。</li>
+<li><strong>文字顯示外部網址</strong>：App 內若有顯示外部專案網址僅為純文字展示，未提供任何連網跳轉功能。</li>
+<li><strong>未使用的敏感權限</strong>：本 App 沒有使用定位、通訊錄、照片、健康或藍牙。</li>
+<li><strong>即時音訊播放</strong>：「聲波合成器」等網頁模擬使用 Web Audio 技術、都卜勒與共鳴管的模擬音源使用系統音訊，均僅於裝置本機即時合成音訊播放，絕不進行音訊錄製或上傳。</li>
+<li><strong>下載圖片與列印</strong>：模擬裡的「下載 PNG」或「列印」會在裝置上產生圖片或 PDF，再交給 iOS 系統分享選單，由您自己選擇存到「照片」、「檔案」、AirDrop 或分享給誰；App 不會自動傳送。</li>
+<li><strong>無廣告與追蹤</strong>：本 App 未使用任何廣告 SDK、資料分析 SDK 或追蹤工具。</li>
+<li><strong>不與第三方分享</strong>：本 App 不收集任何資料，亦絕不將任何資料提供、分享或販售給第三方機構。</li></ul>
+
+<h2>5. 兒童與學生隱私</h2>
+<p>本 App 適合國中與高中學生學習使用。App 不需要註冊帳號，不要求登入，不收集姓名、電子郵件、電話、裝置識別碼或任何足以識別個人身分的資訊。</p>
+
+<h2>6. 教學模型與免責聲明</h2>
+<p>本 App 內之所有模擬皆為教學用途設計之物理模型，參數尺度依教學展示調整；無影燈等模擬為教學示意模型，非醫療器材軟體，模擬數值與真實醫療設備規格不同，不作為醫療器材選購或使用依據。</p>
+
+<h2>7. 政策變更與聯絡方式</h2>
+<p>本隱私權政策若有更新，會修訂本頁面並更新上方生效日期。若有任何疑問或建議，請聯絡開發者信箱：<a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>（開發者：Henry Chao）。</p>
+</main></body></html>

@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physics Interactive Lab Privacy Policy</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 -apple-system,"Helvetica Neue",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right"><a href="privacy.html">繁體中文</a>｜English</p>
+<h1>Physics Interactive Lab (物理互動實驗室) Privacy Policy</h1>
+<p class="meta">Applies to: the iOS app “Physics Interactive Lab (物理互動實驗室)” (Bundle ID: tw.livingtech.physicslab)　Effective: October 27, 2026　Developer: Henry Chao (individual)</p>
+<p>Physics Interactive Lab is an interactive physics learning tool designed for junior and senior high school students. It covers dozens of interactive physics simulations across six thematic halls: Mechanics, Thermodynamics, Waves, Optics, Electromagnetism, and Modern Physics. This includes 3 native SwiftUI/RealityKit 3D experiments (Surgical Shadowless Lamp with umbra/penumbra, illuminance heatmap, 2D cross-section, and optional tabletop AR; Wave Diffraction &amp; Interference; and Moiré Pattern with theoretical periods), 5 native real-measurement experiments utilizing the microphone and motion sensors (Air Column Resonance Tube, Doppler Effect, Simple Harmonic Motion, Uniform Circular Motion, and Inclined Plane), and 63 bundled offline web simulations, presenting physical principles through interactive visualizations.</p>
+<p><strong>The app itself does not connect to the internet, operates without any server, requires no account, does not collect, upload, or sell any personal data, and contains no ads, analytics, or tracking SDKs. It shares no data with third parties. Any external URLs displayed inside the app are shown as plain text only and do not have web connectivity.</strong> Below are the details regarding permissions and data handling.</p>
+
+<h2>Summary</h2>
+<table><tr><th>Data / Item</th><th>Purpose</th><th>Leaves the device?</th></tr>
+<tr><td>Camera video frames</td><td>Detecting tabletop surfaces and placing the shadowless lamp 3D scene in optional AR mode</td><td>No (processed strictly in real time on-device; never photographed, recorded, stored, or uploaded)</td></tr>
+<tr><td>Microphone audio</td><td>Performing real-time FFT frequency analysis in "Air Column Resonance Tube" and "Doppler Effect" experiments when tapping "Start Measurement" (optional feature)</td><td>No (analyzed strictly in volatile memory in real time; never recorded, saved, or uploaded)</td></tr>
+<tr><td>Motion sensor data</td><td>Performing real measurements via accelerometer and gyroscope in Simple Harmonic Motion, Uniform Circular Motion, and Inclined Plane experiments</td><td>No (retained in volatile memory only for the most recent 12 seconds; never saved or uploaded)</td></tr>
+<tr><td>Local preferences &amp; progress</td><td>Saving favorites, recently opened items (up to 20), learning progress (launch counts, duration seconds, operation counts), and UI preferences</td><td>No (stored locally on this device via UserDefaults)</td></tr>
+<tr><td>Web simulation cache</td><td>Local caching for running bundled web simulations offline</td><td>No (retained locally by system WebKit on this device)</td></tr>
+<tr><td>Audio playback</td><td>Synthesizing sound locally via Web Audio (for simulations like Sound Wave Synthesizer) and system audio (for Doppler and resonance tube simulated audio sources)</td><td>No (synthesized and played back locally in real time; no recording capability)</td></tr></table>
+
+<h2>1. Camera Permission and Augmented Reality (AR)</h2>
+<ul><li><strong>Requested only for AR mode:</strong> The app requests camera permission only when the user explicitly triggers AR mode in the surgical shadowless lamp experiment on an AR-capable device.</li>
+<li><strong>Specific purpose:</strong> Camera video frames are used solely to detect a flat tabletop surface in real time and place the shadowless lamp 3D scene onto it.</li>
+<li><strong>Real-time processing without storage:</strong> All camera frames are processed in real time strictly on-device. The app does not take photos, record video, store frames, or upload any visual data.</li>
+<li><strong>Optional feature:</strong> AR is entirely optional. The shadowless lamp experiment provides complete 3D interactive views and 2D cross-sections in standard mode, and the other simulations do not require camera access. Denying camera permission does not affect any other feature or simulation.</li></ul>
+
+<h2>2. Microphone Permission, Motion Sensors, and Haptics</h2>
+<ul><li><strong>Requested only upon active measurement:</strong> Microphone permission is requested only in the "Air Column Resonance Tube" and "Doppler Effect" experiments when the user explicitly taps "Start Measurement".</li>
+<li><strong>Real-time frequency analysis without recording:</strong> Audio is processed strictly in volatile memory in real time for Fast Fourier Transform (FFT) frequency analysis. The app does not record audio, save audio files, or upload any sound to servers.</li>
+<li><strong>Simulated audio source alternative:</strong> Microphone usage is entirely optional. If permission is denied or the device lacks a microphone, users can switch to the in-app "Simulated Audio Source" with full functionality.</li>
+<li><strong>Motion sensors (accelerometer &amp; gyroscope):</strong> Standard motion sensors are used for physical measurements in Simple Harmonic Motion, Uniform Circular Motion, and Inclined Plane experiments. iOS does not require a permission prompt for these sensors. Data is kept in volatile memory only for the most recent 12 seconds and is never saved or uploaded.</li>
+<li><strong>Haptic feedback:</strong> Subtle vibrations are triggered locally when a period is measured or when crossing the critical angle.</li></ul>
+
+<h2>3. Data Stored on the Device</h2>
+<p>All app data is stored exclusively on your local device:</p>
+<ul><li><strong>Preferences and progress:</strong> Favorites, recently opened items (up to 20), hall exploration progress (launch counts, duration seconds, operation counts), and interface preference settings are stored locally in UserDefaults.</li>
+<li><strong>Web simulation cache:</strong> The pre-bundled web simulations are cached locally by system WebKit for offline execution.</li>
+</ul>
+<p>The app does not use iCloud synchronization and maintains no remote servers or databases. All data remains strictly on this device and is entirely deleted by the operating system when the app is removed. The developer cannot access or read this data.</p>
+
+<h2>4. Network Connections, Permissions, and Third Parties</h2>
+<ul><li><strong>Completely offline and serverless:</strong> All simulations (both the native experiments and the web simulations) are bundled directly inside the app package. They run completely offline without an internet connection or backend servers.</li>
+<li><strong>Static text for external URLs:</strong> Any external project URLs displayed inside the app are shown as plain text only and do not provide web linking or browsing functions.</li>
+<li><strong>Unused sensitive permissions:</strong> The app does not access or request permissions for location, contacts, photos, health data, or Bluetooth.</li>
+<li><strong>Audio playback:</strong> Simulations such as the Sound Wave Synthesizer utilize Web Audio, and simulated audio sources for Doppler and resonance tube use system audio to synthesize sound locally on the device for real-time playback only. The app does not record audio or upload sound.</li>
+<li><strong>Image downloads and printing:</strong> When you tap “Download PNG” or “Print” in a simulation, the image or PDF is created on your device and handed to the iOS share sheet, where you choose whether to save it to Photos or Files, send it via AirDrop, or share it. The app never sends it automatically.</li>
+<li><strong>No ads or tracking:</strong> The app does not integrate any advertising, analytics, or tracking SDKs.</li>
+<li><strong>No third-party sharing:</strong> The app does not collect personal data and does not share, transmit, or sell any data to third parties.</li></ul>
+
+<h2>5. Children and Student Privacy</h2>
+<p>This app is designed for junior and senior high school students. It does not require account creation or login, and it does not collect names, email addresses, phone numbers, unique device identifiers, or any personally identifiable information.</p>
+
+<h2>6. Educational Model Disclaimer</h2>
+<p>All simulations in this app use simplified physical models for educational purposes, with parameter scales adjusted for educational demonstrations. The surgical shadowless lamp simulation is an educational model and not medical device software; its values differ from actual clinical equipment specifications and must not be used as a basis for medical device procurement or clinical use.</p>
+
+<h2>7. Changes and Contact Information</h2>
+<p>If this privacy policy is updated, changes will be posted on this page with an updated effective date. If you have any questions or feedback, please contact the developer at <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a> (Developer: Henry Chao).</p>
+</main></body></html>

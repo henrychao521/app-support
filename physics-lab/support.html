@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物理互動實驗室 支援</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right">繁體中文｜<a href="support-en.html">English</a></p><h1>「物理互動實驗室」使用說明與支援</h1>
+<p class="meta">iOS App「物理互動實驗室」（Physics Interactive Lab）：國高中物理互動模擬與實驗學習工具</p>
+
+<h2>App 簡介</h2>
+<p>「物理互動實驗室」專為國中與高中學生學習物理原理設計，收錄數十個互動模擬與實驗，分設六大主題展館，將抽象的物理觀念以視覺化與動態互動呈現：</p>
+<ul><li><strong>力學館</strong>：包含拋體運動、簡諧運動、行星軌道、牛頓運動定律、碰撞等。</li>
+<li><strong>熱學館</strong>：包含理想氣體方程式、氣體分子動力論、熱傳導等。</li>
+<li><strong>波動館</strong>：包含駐波、都卜勒效應、波的疊加、聲波合成器（即時發聲）等。</li>
+<li><strong>光學館</strong>：包含幾何光學透鏡成像、光的折射與全反射、面鏡成像等。</li>
+<li><strong>電磁館</strong>：包含電路模擬、電磁感應、帶電粒子在磁場中的運動等。</li>
+<li><strong>近代物理館</strong>：包含光電效應、黑體輻射、波耳原子模型、放射性半衰期等。</li></ul>
+<p>其中包含以下原生實驗：</p>
+<ul><li><strong>外科手術無影燈（SwiftUI／RealityKit）</strong>：自由調整光源數量、位置與遮擋物，在 3D 場景觀察光線行進、本影／半影與照度熱圖，並提供 2D 剖面。支援在相容裝置上以 AR 投影至真實桌面。</li>
+<li><strong>光的繞射與干涉（SwiftUI）</strong>：提供單狹縫、雙狹縫與繞射光柵三種模式，波長與狹縫參數可自由調整，即時顯示干涉條紋與光強分布。</li>
+<li><strong>摩爾紋（SwiftUI）</strong>：提供平行線、同心圓與點陣三種圖樣，自由旋轉疊合並印證理論週期計算。</li>
+<li><strong>空氣柱共鳴管</strong>：使用者按下「開始量測」時以麥克風即時做頻率分析（FFT），或切換使用內建模擬音源。</li>
+<li><strong>都卜勒效應</strong>：使用者按下「開始量測」時以麥克風即時做頻率分析（FFT），或切換使用內建模擬音源。</li>
+<li><strong>簡諧運動、等速圓周運動、斜面</strong>：支援以動作感測器（加速度計、陀螺儀）進行動態實測，資料僅於記憶體保留最近 12 秒，量到週期或越過臨界角時提供輕微觸覺震動回饋。</li></ul>
+<p>其餘網頁互動模擬均已完整打包在 App 內離線執行，並針對行動裝置進行版面修正，不變更物理計算。每個模擬皆標註 108 課綱程度徽章與學習內容代碼，支援搜尋、收藏、最近開啟與進度追蹤；在 iPad 上亦支援分割畫面多工操作。</p>
+
+<h2>系統需求</h2>
+<ul><li>作業系統：iOS 18 以上版本（支援 iPhone 與 iPad）。</li>
+<li>AR 模式：需具備支援 AR 功能之實機裝置。未支援 AR 或不使用 AR 的裝置仍可完整操作所有模擬（無影燈實驗提供完整的 3D 視角與 2D 剖面）。</li>
+<li>權限需求：相機與麥克風權限皆為選用。拒絕授權仍可使用標準視角或模擬音源完整體驗各項功能。</li>
+<li>網路與帳號：完全不需要帳號、不需登入，App 本身不需網路連線即可完全離線使用。</li></ul>
+
+<h2>常見問題</h2>
+<table><tr><th>問題</th><th>解答</th></tr>
+<tr><td>開啟 AR 模式時提示需要相機權限？</td><td>相機權限僅在支援 AR 的裝置上、於外科手術無影燈實驗中主動開啟 AR 模式時才會請求，用於即時偵測桌面並放置 3D 無影燈場景。影像僅在裝置端即時處理，不拍照、不錄影、不儲存、不上傳。若拒絕相機權限，依然可以在標準 3D 模式下完整使用無影燈及所有其他 55 個模擬。</td></tr>
+<tr><td>裝置不支援 AR 還能使用嗎？</td><td>可以。AR 僅為無影燈實驗的選用輔助功能。無論裝置是否支援 AR，所有模擬（包含無影燈、繞射與干涉、摩爾紋等原生實驗）均可透過一般的觸控、3D 視角或互動介面完整操作。</td></tr>
+<tr><td>聲音與麥克風功能會進行錄音或上傳嗎？</td><td>不會錄音、不存檔、不上傳。麥克風權限只在「空氣柱共鳴管」與「都卜勒效應」兩個實驗、使用者按下「開始量測」時才請求，聲音只在記憶體中即時進行頻率分析（FFT）。若拒絕或裝置沒有麥克風，可改用 App 內建的「模擬音源」，功能完全不受影響。「聲波合成器」等模擬透過 Web Audio、都卜勒與共鳴管的模擬音源透過系統音訊，皆僅在裝置端即時合成播放。</td></tr>
+<tr><td>動作感測器如何運作？需要額外授權嗎？</td><td>不需要權限提示。「簡諧運動」、「等速圓周運動」與「斜面」三個實驗的「實測」功能使用裝置內建之加速度計與陀螺儀，資料只在記憶體中保留最近 12 秒，不存檔、不上傳；在量到週期或越過臨界角時會提供觸覺回饋（輕震）。</td></tr>
+<tr><td>在無網路或離線環境下可以使用嗎？</td><td>可以。本 App 內建所有模擬（包括網頁模擬資源），App 本身不連網、沒有伺服器，所有運算、渲染與音訊合成均在本機裝置離線執行。App 內的外部連結僅以純文字顯示，無連網功能。</td></tr>
+<tr><td>模擬數值可以作為醫療器材規格或臨床依據嗎？</td><td>不行。本 App 所有模擬皆為教學用途之簡化物理模型，參數尺度依教學展示調整；無影燈實驗為教學示意模型，非醫療器材軟體，模擬數值與真實醫療設備不同，絕不可作為醫療器材選購或臨床使用依據。</td></tr>
+<tr><td>我的收藏、進度與偏好設定儲存在哪裡？</td><td>收藏清單、最近開啟（最多 20 筆）、學習進度（開啟次數、停留秒數、操作次數）與介面設定均儲存在您這支裝置本機的 UserDefaults 中；網頁模擬由系統 WebKit 在本機保留快取。App 不使用 iCloud，當您自裝置刪除 App 時，所有資料將由系統一併抹除，開發者無法讀取。</td></tr></table>
+
+<h2>聯絡我們</h2>
+<p>如有任何使用問題、建議或回報，請寄信至 <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>（開發者：Henry Chao）。</p>
+
+<h2>相關連結</h2>
+<ul><li><a href="privacy.html">隱私權政策</a></li></ul>
+</main></body></html>

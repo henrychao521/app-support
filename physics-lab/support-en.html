@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physics Interactive Lab Support</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 -apple-system,"Helvetica Neue",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right"><a href="support.html">繁體中文</a>｜English</p>
+<h1>Physics Interactive Lab (物理互動實驗室) Support</h1>
+<p class="meta">iOS App “Physics Interactive Lab”: Interactive Physics Simulations &amp; Experiments for Learning</p>
+
+<h2>About the App</h2>
+<p>Physics Interactive Lab is designed for junior and senior high school students to explore physics principles through dozens of interactive simulations and experiments across six thematic halls:</p>
+<ul><li><strong>Mechanics:</strong> Projectile motion, simple harmonic motion, planetary orbits, Newton's laws of motion, collisions, and more.</li>
+<li><strong>Thermodynamics:</strong> Ideal gas law, kinetic molecular theory, thermal conduction, and more.</li>
+<li><strong>Waves:</strong> Standing waves, Doppler effect, wave superposition, Sound Wave Synthesizer (real-time audio synthesis), and more.</li>
+<li><strong>Optics:</strong> Geometric optics lens imaging, refraction and total internal reflection, mirror imaging, and more.</li>
+<li><strong>Electromagnetism:</strong> Electric circuits, electromagnetic induction, charged particles in magnetic fields, and more.</li>
+<li><strong>Modern Physics:</strong> Photoelectric effect, blackbody radiation, Bohr model, radioactive decay half-life, and more.</li></ul>
+<p>The app features these native experiments:</p>
+<ul><li><strong>Surgical Shadowless Lamp (SwiftUI／RealityKit):</strong> Adjust the number of light sources, distance, and obstacles to observe rays, illuminance heatmaps, 2D cross-sections, and umbra/penumbra formation, with optional AR tabletop projection on supported devices.</li>
+<li><strong>Wave Diffraction &amp; Interference (SwiftUI):</strong> Explore single slit, double slit, and diffraction grating with adjustable light wavelengths and slit parameters, showing interference fringes and intensity distributions.</li>
+<li><strong>Moiré Pattern (SwiftUI):</strong> Superpose and rotate parallel lines, concentric circles, and dot matrices, verifying visual interference patterns against theoretical period calculations.</li>
+<li><strong>Air Column Resonance Tube:</strong> Perform real-time FFT frequency analysis via microphone upon tapping "Start Measurement", or switch to the built-in simulated audio source.</li>
+<li><strong>Doppler Effect:</strong> Perform real-time FFT frequency analysis via microphone upon tapping "Start Measurement", or switch to the built-in simulated audio source.</li>
+<li><strong>Simple Harmonic Motion, Uniform Circular Motion, Inclined Plane:</strong> Perform real measurements using on-device motion sensors (accelerometer and gyroscope), keeping data in memory only for the most recent 12 seconds, accompanied by gentle haptic feedback when measuring a period or crossing the critical angle.</li></ul>
+<p>The remaining web-based interactive simulations are pre-bundled directly within the app for complete offline execution, with mobile layout optimizations that preserve the original physics calculations. Each simulation is labeled with 108 Curriculum grade badges and learning content codes, supporting live search, favorites, recently opened history, and learning progress tracking, as well as split-view multitasking on iPad.</p>
+
+<h2>System Requirements</h2>
+<ul><li>Operating System: iOS 18 or later (iPhone and iPad).</li>
+<li>AR Mode: Requires an AR-capable physical device. Devices without AR support can still fully access all simulations (the shadowless lamp experiment provides full 3D interactive views and 2D cross-sections).</li>
+<li>Permissions: Camera and microphone permissions are strictly optional. Denying permissions does not prevent full access to standard views or built-in simulated audio sources.</li>
+<li>Hardware &amp; Accounts: No extra hardware or user accounts required. The app functions entirely offline without internet connectivity.</li></ul>
+
+<h2>Frequently Asked Questions</h2>
+<table><tr><th>Question</th><th>Answer</th></tr>
+<tr><td>Why does AR mode ask for camera permission?</td><td>Camera permission is requested only on AR-capable devices when you actively open AR mode in the surgical shadowless lamp experiment. It is used solely to detect a tabletop surface and place the 3D scene. Video frames are processed in real time on-device and are never photographed, recorded, saved, or uploaded. If permission is denied, all simulations remain fully accessible in standard 3D or 2D modes.</td></tr>
+<tr><td>Can I use the app if my device does not support AR?</td><td>Yes. AR is an optional feature. All simulations, including all native experiments, can be fully explored without AR.</td></tr>
+<tr><td>Does audio or microphone functionality record or upload sound?</td><td>No audio is recorded, saved, or uploaded. Microphone permission is requested only in "Air Column Resonance Tube" and "Doppler Effect" when tapping "Start Measurement", and audio is analyzed strictly in volatile memory in real time via FFT. If denied or unavailable, users can switch to the in-app "Simulated Audio Source". Web Audio in simulations like Sound Wave Synthesizer and system audio for Doppler and resonance tube simulated audio sources synthesize sound locally in real time for playback only.</td></tr>
+<tr><td>How do motion sensors work and do they require permission?</td><td>No permission prompt is required by iOS. The real measurement features in Simple Harmonic Motion, Uniform Circular Motion, and Inclined Plane utilize the device's built-in accelerometer and gyroscope. Data is kept in memory only for the most recent 12 seconds and is never saved or uploaded. Gentle haptic feedback is triggered when measuring a period or crossing the critical angle.</td></tr>
+<tr><td>Does the app work offline without internet?</td><td>Yes. The app bundles all simulations locally. It does not connect to the internet and maintains no external servers; all physics computations, rendering, and audio synthesis run locally on your device. External URLs inside the app are displayed as plain text only without web navigation.</td></tr>
+<tr><td>Can simulation values be used as medical equipment specifications?</td><td>No. All simulations use simplified physical models designed for educational demonstrations, with parameter scales adjusted for educational clarity. The shadowless lamp simulation is an educational model, not medical device software; its values differ from actual clinical equipment specifications and must not be used as a basis for medical device procurement or clinical use.</td></tr>
+<tr><td>Where are my favorites, progress, and settings stored?</td><td>Favorites, recently opened items (up to 20), learning progress (launch counts, duration seconds, operation counts), and UI preferences are stored locally in your device's UserDefaults; web simulations are cached locally by system WebKit. The app does not use iCloud synchronization, and all local data is completely deleted when the app is uninstalled. The developer cannot access any of this data.</td></tr></table>
+
+<h2>Contact Us</h2>
+<p>For questions, feedback, or support, please contact <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a> (Developer: Henry Chao).</p>
+
+<h2>Related Links</h2>
+<ul><li><a href="privacy-en.html">Privacy Policy</a></li></ul>
+</main></body></html>
