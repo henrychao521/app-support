@@ -42,9 +42,9 @@ ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-ali
 <h2>4. Network Connections, Permissions, and Third Parties</h2>
 <ul><li><strong>Completely offline and serverless:</strong> All simulations (both the native experiments and the web simulations) are bundled directly inside the app package. They run completely offline without an internet connection or backend servers.</li>
 <li><strong>Static text for external URLs:</strong> Any external project URLs displayed inside the app are shown as plain text only and do not provide web linking or browsing functions.</li>
-<li><strong>Unused sensitive permissions:</strong> The app does not access or request permissions for location, contacts, photos, health data, or Bluetooth.</li>
+<li><strong>Unused sensitive permissions:</strong> The app does not access or request permissions for location, contacts, health data, or Bluetooth, and it never reads your photo library.</li>
 <li><strong>Audio playback:</strong> Simulations such as the Sound Wave Synthesizer utilize Web Audio, and simulated audio sources for Doppler and resonance tube use system audio to synthesize sound locally on the device for real-time playback only. The app does not record audio or upload sound.</li>
-<li><strong>Image downloads and printing:</strong> When you tap “Download PNG” or “Print” in a simulation, the image or PDF is created on your device and handed to the iOS share sheet, where you choose whether to save it to Photos or Files, send it via AirDrop, or share it. The app never sends it automatically.</li>
+<li><strong>Image downloads and printing:</strong> When you tap “Download PNG” or “Print” in a simulation, the image or PDF is created on your device and handed to the iOS share sheet, where you choose whether to save it to Photos or Files, send it via AirDrop, or share it. The app never sends it automatically. The first time you choose “Save Image” in the share sheet, iOS asks whether the app may add images to Photos; the app only adds the image you chose to save and never reads your photo library.</li>
 <li><strong>No ads or tracking:</strong> The app does not integrate any advertising, analytics, or tracking SDKs.</li>
 <li><strong>No third-party sharing:</strong> The app does not collect personal data and does not share, transmit, or sell any data to third parties.</li></ul>
 
