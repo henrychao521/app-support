@@ -6,7 +6,7 @@ main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;marg
 .meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
 ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right">繁體中文｜<a href="privacy-en.html">English</a></p><h1>「AI 實驗室」App 隱私權政策</h1>
 <p class="meta">適用：iPhone／iPad App「AI 實驗室」（英文名 AI Lab，套件識別碼 tw.livingtech.ailab）　生效日期：2026 年 10 月 27 日　開發者：Henry Chao（個人）</p>
-<p>「AI 實驗室」（AI Lab）是給國高中生學習「判別式 AI」的實作 App，包含五個單元：手部關鍵點與握筆、刷牙分區（臉＋手的位置）、教 AI 認字（合成的假車牌）、自己的分類器（特徵向量＋k 最近鄰）、人在哪裡（人物偵測）。學生在 App 裡寫 Python 程式判斷、看正確率與混淆矩陣，另有專題與學習頁。</p>
+<p>「AI 實驗室」（AI Lab）是給國高中生學習「判別式 AI」的實作 App，包含五個單元：手部關鍵點與握筆、刷牙分區（臉＋手的位置）、教 AI 認字（合成的假車牌）、自己的分類器（特徵向量＋k 最近鄰）、人在哪裡（人物偵測）；單元 1 另有「AI 握筆教練」練習模式（用相機即時判斷握筆姿勢並給提示，也可以換成學生自己寫的規則）。學生在 App 裡寫 Python 程式判斷、看正確率與混淆矩陣，另有專題與學習頁。</p>
 <p><strong>本 App 沒有任何連網功能，開發者沒有伺服器，不需要帳號、不登入，沒有廣告，也沒有分析或追蹤 SDK。App 不收集、不上傳、不販售、不與第三方分享任何資料，不使用 iCloud 同步，開發者也讀不到使用者的資料。</strong>以下說明 App 在這支裝置上處理哪些資料、用途為何，以及你如何管理這些資料。</p>
 
 <h2>總覽</h2>
@@ -29,7 +29,8 @@ ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-ali
 <h2>3. 存下來的資料與「存縮圖」例外</h2>
 <ul><li><strong>按「存這一筆」才儲存</strong>：只有學生自己按「存這一筆」時，App 才把那一刻的特徵數字和標籤存進資料集；手寫板則存 8×12 格子的數值。App 不存原始影像。</li>
 <li><strong>唯一例外（96×96 小縮圖）</strong>：在「自己的分類器」單元裡，只有當學生自己打開「存縮圖」開關（預設關閉）時，才會另存一張 96×96 的小縮圖在資料集裡。App 會提醒學生不要拍人臉、不要拍別人。</li>
-<li><strong>車牌單元與個資倫理</strong>：「教 AI 認字」單元只用印有「練習用」的合成假車牌；專題頁會討論個資倫理（車牌屬可間接識別個人的資料）。</li></ul>
+<li><strong>車牌單元與個資倫理</strong>：「教 AI 認字」單元只用印有「練習用」的合成假車牌；專題頁會討論個資倫理（車牌屬可間接識別個人的資料）。</li>
+<li><strong>「AI 握筆教練」不存結果</strong>：練習模式的 20 秒檢查、練習和比較結果只顯示在畫面上，離開就消失，不會存進資料集或裝置。</li></ul>
 
 <h2>4. 存放處、上限與刪除方式</h2>
 <ul><li><strong>存在裝置沙盒</strong>：資料集、學生改過的程式、少量設定都存在 App 的沙盒裡（這支裝置），不使用 iCloud 同步，開發者也讀不到。</li>
@@ -42,7 +43,7 @@ ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-ali
 
 <h2>6. 不連網與執行環境</h2>
 <p>Python 執行環境（Pyodide）與編輯器都內建在 App 裡，網頁層的安全設定禁止連到任何外部網址；App 沒有任何連網功能、沒有伺服器。</p>
-<p><strong>準確度說明</strong>：App 內的判斷結果是學生自己寫的規則或簡單模型算出來的，僅供學習，可能因光線、角度、距離而出錯。</p>
+<p><strong>準確度說明</strong>：App 內的判斷結果是學生自己寫的規則、簡單模型，或「AI 握筆教練」內建的握筆規則算出來的，僅供學習，不是醫療評估，可能因光線、角度、距離而出錯。</p>
 
 <h2>7. 兒童與學生隱私</h2>
 <p>本 App 供國高中生學習判別式 AI 使用。App 不需要帳號、不登入，不收集、不儲存也不傳送姓名、聯絡方式或任何可識別個人的資料。所有練習資料都只存在這支裝置上，只有在學生自己使用系統分享選單匯出時，才會交給學生所選的對象（例如老師）。</p>
