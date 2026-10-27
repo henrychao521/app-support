@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Lab Privacy Policy</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right"><a href="privacy.html">繁體中文</a>｜English</p><h1>"AI Lab" App Privacy Policy</h1>
+<p class="meta">Applies to: iPhone / iPad App "AI Lab" (Chinese name: AI 實驗室, Bundle ID: tw.livingtech.ailab)　Effective Date: October 27, 2026　Developer: Henry Chao (Individual)</p>
+<p>"AI Lab" ("AI 實驗室") is a hands-on app for middle and high school students to learn discriminative AI. It features five units: Hand Keypoints &amp; Pen Grip, Toothbrushing Zones (face + hand coordinates), Teaching AI to Recognize Text (synthetic practice license plates), Your Own Classifier (feature vectors + k-nearest neighbors), and Where Are the People (person detection). Students write Python code in the App to make predictions and inspect accuracy and confusion matrices, alongside project and learning pages.</p>
+<p><strong>This App has no internet connectivity, the developer has no server, no account or sign-in is required, and there are no ads, analytics, or tracking SDKs. The App does not collect, upload, sell, or share any data with third parties, does not use iCloud sync, and the developer cannot read any user data.</strong> Below is a breakdown of what data the App handles on this device, how it is used, and how you can manage it.</p>
+
+<h2>Overview</h2>
+<table><tr><th>Data</th><th>Purpose</th><th>Leaves This Device?</th></tr>
+<tr><td>Live Camera Feed</td><td>Processed in real time on the device using Apple's Vision framework to extract features (hand keypoint coordinates, face coordinates and eye distance, recognized text, image feature vectors, person bounding box coordinates); never recorded as video or saved as still images</td><td>No</td></tr>
+<tr><td>Face-Related Numbers ("Toothbrushing Zones" unit)</td><td>Detects face coordinates in real time; when pressing "Save This Sample," only a few numbers (face center coordinates, eye distance, hand coordinates, hand movement amount) and the label are saved — no face images are stored</td><td>No (unless you export and share the dataset yourself)</td></tr>
+<tr><td>Datasets (feature numbers, labels, handwriting pad 8×12 grid values)</td><td>Stores samples saved when students press "Save This Sample" or datasets imported from Files for Python coding and classifier exercises</td><td>Only when you export to CSV or JSON and share via the system share sheet yourself</td></tr>
+<tr><td>96×96 Thumbnail (only in "Your Own Classifier" unit)</td><td>Off by default; only saved in the dataset when a student manually turns on the "Save Thumbnail" toggle and presses "Save This Sample"</td><td>Only when you export and share that dataset yourself</td></tr>
+<tr><td>Student-Modified Python Code and Basic Settings</td><td>Runs code on the device, displays accuracy and confusion matrices, and stores App settings</td><td>No</td></tr></table>
+
+<h2>1. Camera Permission and Image Processing</h2>
+<ul><li><strong>When Permission Is Requested</strong>: The App requests camera permission (both front and back cameras can be switched) only when you enter an experiment that uses the camera. If you decline camera permission, you can still use the built-in sample data and lessons.</li>
+<li><strong>Real-Time Feature Extraction</strong>: The App uses Apple's Vision framework on the device to convert camera frames into features in real time — hand keypoint coordinates, face coordinates and eye distance, recognized text, image feature vectors, and person bounding box coordinates.</li>
+<li><strong>No Raw Images Saved or Uploaded</strong>: Camera frames are processed strictly in real time on the device; the App does not record video, capture still images to disk, or upload anything.</li>
+<li><strong>"Open Settings" Button</strong>: The "Open Settings" button in the App only opens the system Settings app so the user can enable camera permission.</li></ul>
+
+<h2>2. Face Data</h2>
+<p>The "Toothbrushing Zones" unit uses Apple's Vision framework to detect the face on screen, computed strictly in real time on the device. If a student presses "Save This Sample," only a few numbers (face center coordinates, eye distance, hand coordinates, and hand movement amount) and a label are saved. <strong>No face image is saved</strong>, and these numbers cannot be used to identify who a person is. They are never uploaded, never shared, and never used for any other purpose.</p>
+
+<h2>3. Saved Data and the "Save Thumbnail" Exception</h2>
+<ul><li><strong>Saved Only When Pressing "Save This Sample"</strong>: Only when a student presses "Save This Sample" does the App save that moment's feature numbers and label into the dataset; the handwriting pad saves 8×12 grid values. The App does not save raw images.</li>
+<li><strong>Single Exception (96×96 Thumbnail)</strong>: In the "Your Own Classifier" unit, only when a student manually turns on the "Save Thumbnail" toggle (which is off by default) does the App additionally save a 96×96 small thumbnail inside the dataset. The App reminds students not to capture faces or other people.</li>
+<li><strong>License Plate Unit and Privacy Ethics</strong>: The "Teaching AI to Recognize Text" license plate unit only uses synthetic fake license plates printed with "For Practice"; the project page discusses personal data ethics (explaining that license plates are data that can indirectly identify individuals).</li></ul>
+
+<h2>4. Where Data Is Stored, Limits, and Deletion</h2>
+<ul><li><strong>Stored in the Device Sandbox</strong>: Datasets, student-modified code, and a small amount of settings are stored only inside the App's sandbox on this device. iCloud sync is not used, and the developer cannot read this data.</li>
+<li><strong>Storage Limits</strong>: Each unit can store up to 30 datasets, and each dataset has a sample limit.</li>
+<li><strong>Deleting Data</strong>: Datasets can be deleted individually, or you can use "Delete All" in the App to delete all datasets, modified code, settings, and temporary export files together. Deleting the App deletes all data.</li></ul>
+
+<h2>5. Exporting and Importing</h2>
+<ul><li><strong>Exporting Datasets</strong>: Datasets can be exported as CSV or JSON via the system share sheet, where students choose for themselves where to save or with whom to share the file (for example, submitting to a teacher).</li>
+<li><strong>Importing Datasets</strong>: JSON, CSV, or plain-text datasets (such as labeled data provided by a teacher) can be imported from the Files app. Imported files are checked for format and limited in file size (8 MB) and sample count; thumbnails in any unit other than "Your Own Classifier" are discarded upon import.</li></ul>
+
+<h2>6. Offline Design and Execution Environment</h2>
+<p>Both the Python runtime environment (Pyodide) and the code editor are built into the App, and security settings at the web layer prohibit connecting to any external URLs. The App has no networking functionality and no servers.</p>
+<p><strong>Accuracy Note</strong>: Prediction results in the App are computed by student-written rules or simple models for learning purposes only, and may make mistakes due to lighting, angle, or distance.</p>
+
+<h2>7. Children and Student Privacy</h2>
+<p>This App is designed for middle and high school students learning discriminative AI. The App requires no account or sign-in, and does not collect, store, or transmit names, contact details, or any personally identifiable information. All practice data remains on this device unless a student actively exports a file through the system share sheet to a recipient of their choice (such as a teacher).</p>
+
+<h2>8. Changes to This Policy and Contact Information</h2>
+<p>If this policy changes, this page will be updated and the effective date above will be revised. For questions or feedback, please email <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a> (Developer: Henry Chao).</p>
+<p>For usage instructions and frequently asked questions, please visit the <a href="support-en.html">AI Lab Support Page</a>.</p>
+</main></body></html>

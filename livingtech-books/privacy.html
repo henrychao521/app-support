@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生科互動實驗室 隱私權政策</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}h3{font-size:17px;margin:18px 0 4px}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right">繁體中文｜<a href="privacy-en.html">English</a></p><h1>「生科互動實驗室」App 隱私權政策</h1>
+<p class="meta">適用：iPhone 與 iPad App「生科互動實驗室」（英文名 LivingTech Interactive Lab，套件識別碼 tw.livingtech.books）　生效日期：2026 年 10 月 27 日　開發者：Henry Chao（個人）</p>
+<p>「生科互動實驗室」把五套生活科技與工程教材網站的互動模組（國中生活科技、高中生活科技、高中工程設計、台灣工程地景、電路實作練習）以及 Python 程式練功房收進一支 App，透過原生介面提供主題分類、搜尋、最愛、最近開啟與學習進度。所有教材內容與 Python 執行環境（Pyodide）都打包內建在 App 裡，離線可用，程式只在這支裝置上執行。<strong>本 App 不需要帳號、不登入，不要求任何系統權限，沒有廣告，沒有分析或追蹤 SDK，不使用 iCloud 同步，也不販售、不與第三方分享任何資料；開發者沒有伺服器，也讀不到使用者的資料。</strong></p>
+
+<h2>總覽</h2>
+<table><tr><th>資料</th><th>用途</th><th>會離開裝置嗎</th></tr>
+<tr><td>已開啟／已完成的模組、我的最愛（最多 300 筆）、最近開啟、頁內互動完成數</td><td>在原生介面顯示學習進度、我的最愛與最近開啟紀錄</td><td>不會（只存在這支裝置上）</td></tr>
+<tr><td>網頁模組作答進度</td><td>在系統 WebKit 的本機網頁儲存空間儲存各網頁模組的作答進度（Python 練功房的程式由內建 Pyodide 在裝置上執行）</td><td>不會（只在這支裝置上儲存與執行）</td></tr>
+<tr><td>地圖圖磚與少數頁面照片的連線請求（僅連網時）</td><td>「台灣工程地景」連網時向內政部國土測繪中心與 Esri 地圖伺服器下載圖磚；少數頁面從維基共享資源載入照片</td><td>外部伺服器只會收到一般網路連線都會有的資訊（例如 IP 位址、要下載哪一張圖），App 不會送出任何個人資料</td></tr>
+<tr><td>列印、下載、分享與複製的內容</td><td>將模組內容產生 PDF、產生檔案、帶出文字或網址，或放進系統剪貼簿</td><td>App 不會自動傳送；僅在使用者自己透過 iOS 系統分享選單選擇儲存、列印或分享時，依使用者選擇的方式處理</td></tr></table>
+
+<h2>存在裝置上的資料與離線執行</h2>
+<ul><li><strong>本機學習紀錄</strong>：已開啟／已完成的模組、我的最愛（最多 300 筆）、最近開啟，以及頁內互動完成數，都只存在這支裝置上。</li>
+<li><strong>網頁模組作答進度</strong>：各網頁模組自己的作答進度，存在系統 WebKit 的本機網頁儲存空間，同樣只在這支裝置上。</li>
+<li><strong>內建內容與 Python 執行環境</strong>：教材內容都打包在 App 裡，離線可用；Python 程式練功房的 Python 執行環境（Pyodide）也內建在 App 裡，程式只在這支裝置上執行。</li>
+<li><strong>資料儲存與清除</strong>：本 App 不使用 iCloud 同步，開發者沒有伺服器，也讀不到使用者的資料。所有資料只存在這支裝置上，刪除 App 即全部刪除。</li></ul>
+
+<h2>權限與網頁層隱私保護</h2>
+<ul><li><strong>不要求任何權限</strong>：本 App 不要求任何系統權限。</li>
+<li><strong>網頁層主動阻擋</strong>：為了保護隱私，App 版在網頁層主動擋掉網站原本的分析／追蹤程式、Google 字型、Google 登入與雲端硬碟、把作答紀錄送到試算表的功能（Google Apps Script）、表單送出、多人連線，以及網頁要求定位（一律拒絕）。教師後台入口在 App 版亦已隱藏。</li></ul>
+
+<h2>少數需要連網的內容</h2>
+<ul><li><strong>地圖底圖與照片</strong>：連網時，「台灣工程地景」的地圖底圖會向內政部國土測繪中心與 Esri 的地圖伺服器下載圖磚；少數頁面的照片會從維基共享資源（Wikimedia Commons）載入。</li>
+<li><strong>連線資訊與離線表現</strong>：這些伺服器只會收到一般網路連線都會有的資訊（例如 IP 位址、要下載哪一張圖），App 不會送出任何個人資料。離線時，地圖會顯示空白格線、照片會換成「需要連網」卡片，其他功能照常。</li></ul>
+
+<h2>外部影片與外部網站</h2>
+<p>YouTube 影片與外部互動網站不在 App 內嵌入播放，而是顯示一張卡片；只有使用者按下按鈕，才用 App 內的 Safari 瀏覽頁面開啟，那些網站有各自的隱私權政策。</p>
+
+<h2>輸出、分享與電子郵件連結</h2>
+<ul><li><strong>列印、下載、分享與複製</strong>：模組裡的「列印」會產生 PDF、「下載」會產生檔案、「分享」會帶出文字或網址，三者都透過 iOS 系統分享選單，由使用者自己選擇存到「檔案」、AirDrop、列印或分享給誰；「複製」只放進系統剪貼簿。App 本身不會自動傳送任何東西。</li>
+<li><strong>電子郵件連結</strong>：電子郵件連結（mailto）會交給系統的郵件 App。</li></ul>
+
+<h2>兒童與學生隱私</h2>
+<p>本 App 收錄國中與高中生活科技、工程設計等互動教材模組，適合學生與一般使用者學習使用。App 不需要帳號、不登入，不收集任何個人資料，並在網頁層主動擋掉把作答紀錄送到試算表、表單送出與多人連線等功能，所有學習進度與作答紀錄都只留在這支裝置上。</p>
+
+<h2>政策變更與聯絡方式</h2>
+<p>本政策如有變更，會更新本頁並修改上方的生效日期。如有任何問題或意見，請寄信至 <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>（開發者：Henry Chao）。</p>
+</main></body></html>

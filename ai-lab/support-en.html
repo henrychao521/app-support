@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Lab Support</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right"><a href="support.html">繁體中文</a>｜English</p><h1>"AI Lab" User Guide &amp; Support</h1>
+<p class="meta">Applies to: iPhone / iPad App "AI Lab" (Chinese name: AI 實驗室, Bundle ID: tw.livingtech.ailab)　Effective Date: October 27, 2026　Developer: Henry Chao (Individual)</p>
+
+<h2>About the App</h2>
+<p>"AI Lab" ("AI 實驗室") is a hands-on app for middle and high school students to learn discriminative AI. Students collect feature data on their device, write Python code to make predictions, inspect accuracy and confusion matrices, and explore project and learning pages. The App includes five units:</p>
+<ul><li><strong>Hand Keypoints &amp; Pen Grip</strong>: Uses hand keypoint coordinates to observe and classify pen grip and hand gestures.</li>
+<li><strong>Toothbrushing Zones (Face + Hand Coordinates)</strong>: Uses face center coordinates, eye distance, hand coordinates, and hand movement amount to determine toothbrushing zones.</li>
+<li><strong>Teaching AI to Recognize Text (Synthetic Practice License Plates)</strong>: Practices character and text recognition using synthetic fake license plates printed with "For Practice" and a handwriting pad (8×12 grid values), while the project page discusses personal data ethics (license plates are data that can indirectly identify individuals).</li>
+<li><strong>Your Own Classifier (Feature Vectors + k-Nearest Neighbors)</strong>: Builds a custom classifier using image feature vectors and k-nearest neighbors.</li>
+<li><strong>Where Are the People (Person Detection)</strong>: Practices detection and classification using person bounding box coordinates.</li></ul>
+<p><strong>Accuracy Note</strong>: Prediction results in the App are computed by student-written rules or simple models for learning purposes only, and may make mistakes due to lighting, angle, or distance.</p>
+
+<h2>System Requirements</h2>
+<ul><li>iOS 17 or later, compatible with iPhone and iPad.</li>
+<li>Experiments that use the camera require a device with a camera (both front and back cameras can be switched); if camera permission is declined, built-in sample data and lessons remain available.</li>
+<li>No internet required: The Python runtime environment (Pyodide) and editor are built into the App for complete offline use.</li></ul>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Are camera images saved or uploaded?</h3>
+<p>No. The App uses Apple's Vision framework on the device to convert live camera frames into features in real time (hand keypoint coordinates, face coordinates and eye distance, recognized text, image feature vectors, person bounding box coordinates). It does not record video, save still images, or upload anything. Only when you press "Save This Sample" does it save that moment's feature numbers and label into the dataset (the handwriting pad saves 8×12 grid values). In "Toothbrushing Zones," only face center coordinates, eye distance, hand coordinates, hand movement amount, and the label are saved — no face image is saved, and these numbers cannot identify who someone is.</p>
+
+<h3>What is "Save Thumbnail"?</h3>
+<p>By default, the App does not save any images. The only exception is in the "Your Own Classifier" unit: when a student manually turns on the "Save Thumbnail" toggle (off by default) and presses "Save This Sample," a 96×96 small thumbnail is saved in the dataset. Students are reminded not to capture faces or other people.</p>
+
+<h3>How do I submit data to my teacher or import a teacher's dataset?</h3>
+<p>Datasets can be exported as CSV or JSON via the system share sheet, allowing you to choose where to save or with whom to share the file (for example, submitting to your teacher). You can also import JSON, CSV, or plain-text datasets (such as labeled data from your teacher) from the Files app; imported files are checked for format and limited in size (8 MB) and sample count, and thumbnails from units other than "Your Own Classifier" are discarded.</p>
+
+<h3>How do I delete all data?</h3>
+<p>All datasets, modified code, and basic settings are stored in the App's sandbox on this device (up to 30 datasets per unit, with a sample limit per dataset). You can delete datasets one by one, or tap "Delete All" inside the App to remove all datasets, modified code, settings, and temporary export files at once. Deleting the App also removes all data.</p>
+
+<h3>Can I use the App without an internet connection?</h3>
+<p>Yes. Both the Python runtime environment (Pyodide) and the editor are built into the App, and web-layer security settings prohibit connecting to any external URLs. The App has no networking features and no servers, so it works completely offline.</p>
+
+<h3>What can I do if I decline camera permission, and how do I enable it later?</h3>
+<p>If you decline camera permission, you can still use the built-in sample data and lessons. If you want to enable camera permission later, tap the "Open Settings" button in the App, which opens system Settings where you can turn on camera access.</p>
+
+<h2>Contact Us</h2>
+<p>For questions or suggestions, please email <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a> (Developer: Henry Chao, Individual).</p>
+
+<h2>Related Links</h2>
+<ul><li><a href="privacy-en.html">Privacy Policy</a></li>
+<li><a href="support.html">中文支援頁（繁體中文）</a></li></ul>
+</main></body></html>

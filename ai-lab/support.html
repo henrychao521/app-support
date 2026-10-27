@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 實驗室 支援</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right">繁體中文｜<a href="support-en.html">English</a></p><h1>「AI 實驗室」使用說明與支援</h1>
+<p class="meta">適用：iPhone／iPad App「AI 實驗室」（英文名 AI Lab，套件識別碼 tw.livingtech.ailab）　生效日期：2026 年 10 月 27 日　開發者：Henry Chao（個人）</p>
+
+<h2>App 簡介</h2>
+<p>「AI 實驗室」（AI Lab）是給國高中生學習「判別式 AI」的實作 App。學生可以在裝置上收集特徵資料、自己寫 Python 程式做判斷、看正確率與混淆矩陣，並搭配專題與學習頁深入學習。App 包含五個實作單元：</p>
+<ul><li><strong>手部關鍵點與握筆</strong>：透過手部關鍵點座標觀察並判斷握筆與手部動作。</li>
+<li><strong>刷牙分區（臉＋手的位置）</strong>：利用臉中心座標、眼距、手的座標與手移動量判斷刷牙分區。</li>
+<li><strong>教 AI 認字（合成的假車牌）</strong>：使用印有「練習用」的合成假車牌與手寫板（8×12 格子的數值）練習認字，並在專題頁討論個資倫理（車牌屬可間接識別個人的資料）。</li>
+<li><strong>自己的分類器（特徵向量＋k 最近鄰）</strong>：運用影像特徵向量與 k 最近鄰建立自己的分類器。</li>
+<li><strong>人在哪裡（人物偵測）</strong>：利用人物框的位置進行偵測與判斷練習。</li></ul>
+<p><strong>準確度說明</strong>：App 的判斷結果是學生自己寫的規則或簡單模型算出來的，僅供學習，可能因光線、角度、距離而出錯。</p>
+
+<h2>系統需求</h2>
+<ul><li>iOS 17 以上，支援 iPhone 與 iPad。</li>
+<li>使用相機的實驗需要裝置有相機（前、後鏡頭都可切換）；拒絕相機權限後，仍可用內建樣本資料與教學。</li>
+<li>不需要網路：Python 執行環境（Pyodide）與編輯器都內建在 App 裡，離線即可完整操作。</li></ul>
+
+<h2>常見問題</h2>
+<h3>相機拍到的畫面會不會存起來？</h3>
+<p>不會。App 用 Apple 的 Vision 框架在裝置上即時把畫面變成特徵（手部關鍵點座標、臉的位置與眼距、辨識出的文字、影像特徵向量、人物框的位置），不錄影、不拍照存檔、不上傳。只有你自己按「存這一筆」時，才把那一刻的特徵數字和標籤存進資料集（手寫板存 8×12 格子的數值）；「刷牙分區」也只存臉中心座標、眼距、手的座標、手移動量和標籤，不存臉部影像，不能用來辨識是誰。</p>
+
+<h3>什麼是「存縮圖」？</h3>
+<p>App 預設不存任何影像。唯一例外是在「自己的分類器」單元裡，當學生自己打開「存縮圖」開關（預設關閉）並按「存這一筆」時，才會在資料集裡另存一張 96×96 的小縮圖。使用時請注意不要拍人臉、不要拍別人。</p>
+
+<h3>怎麼交資料給老師，或匯入老師給的資料集？</h3>
+<p>資料集可匯出成 CSV 或 JSON，透過系統分享選單由學生自己選擇存到哪裡、分享給誰（例如交給老師）。也可從「檔案」匯入 JSON、CSV 或純文字資料集（例如老師發的標註資料）；匯入時會檢查格式、限制大小（8 MB）與筆數，「自己的分類器」以外單元的縮圖會被丟掉。</p>
+
+<h3>怎麼刪掉全部資料？</h3>
+<p>所有資料集、改過的程式與少量設定都存在這支裝置的 App 沙盒裡（每個單元最多 30 個資料集，每個資料集有樣本上限）。你可以逐一刪除資料集，也可以在 App 裡按「全部刪除」，把資料集、改過的程式、設定、匯出暫存檔一起刪掉；直接刪除 App 也會全部刪除。</p>
+
+<h3>沒有網路能不能用？</h3>
+<p>可以。Python 執行環境（Pyodide）與編輯器都內建在 App 裡，網頁層的安全設定禁止連到任何外部網址，App 沒有任何連網功能、沒有伺服器，不需網路即可使用。</p>
+
+<h3>拒絕相機權限還能做什麼？怎麼重新打開？</h3>
+<p>拒絕相機權限後，仍可使用內建樣本資料與教學內容。若之後要開啟相機權限，可點選 App 裡的「打開設定」按鈕，會開啟系統設定讓你開啟相機權限。</p>
+
+<h2>聯絡我們</h2>
+<p>使用問題或建議，請寄信至 <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>（開發者：Henry Chao，個人）。</p>
+
+<h2>相關連結</h2>
+<ul><li><a href="privacy.html">隱私權政策</a></li>
+<li><a href="support-en.html">English Support</a></li></ul>
+</main></body></html>

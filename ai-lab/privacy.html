@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 實驗室 隱私權政策</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right">繁體中文｜<a href="privacy-en.html">English</a></p><h1>「AI 實驗室」App 隱私權政策</h1>
+<p class="meta">適用：iPhone／iPad App「AI 實驗室」（英文名 AI Lab，套件識別碼 tw.livingtech.ailab）　生效日期：2026 年 10 月 27 日　開發者：Henry Chao（個人）</p>
+<p>「AI 實驗室」（AI Lab）是給國高中生學習「判別式 AI」的實作 App，包含五個單元：手部關鍵點與握筆、刷牙分區（臉＋手的位置）、教 AI 認字（合成的假車牌）、自己的分類器（特徵向量＋k 最近鄰）、人在哪裡（人物偵測）。學生在 App 裡寫 Python 程式判斷、看正確率與混淆矩陣，另有專題與學習頁。</p>
+<p><strong>本 App 沒有任何連網功能，開發者沒有伺服器，不需要帳號、不登入，沒有廣告，也沒有分析或追蹤 SDK。App 不收集、不上傳、不販售、不與第三方分享任何資料，不使用 iCloud 同步，開發者也讀不到使用者的資料。</strong>以下說明 App 在這支裝置上處理哪些資料、用途為何，以及你如何管理這些資料。</p>
+
+<h2>總覽</h2>
+<table><tr><th>資料</th><th>用途</th><th>會離開裝置嗎</th></tr>
+<tr><td>相機即時畫面</td><td>用 Apple 的 Vision 框架在裝置上即時把畫面變成特徵（手部關鍵點座標、臉的位置與眼距、辨識出的文字、影像特徵向量、人物框的位置）；不錄影、不拍照存檔</td><td>不會</td></tr>
+<tr><td>臉部相關數字（「刷牙分區」單元）</td><td>即時偵測臉的位置；按「存這一筆」時只存臉中心座標、眼距、手的座標、手移動量和標籤，不存臉部影像</td><td>不會（除非你自己匯出資料集並分享）</td></tr>
+<tr><td>資料集（特徵數字、標籤、手寫板 8×12 格子的數值）</td><td>儲存學生按「存這一筆」時的樣本，或從「檔案」匯入的資料集，供 Python 程式與模型實作練習</td><td>只有你自己匯出成 CSV 或 JSON 並透過系統分享選單傳送時才會離開裝置</td></tr>
+<tr><td>96×96 小縮圖（僅「自己的分類器」單元）</td><td>預設關閉；只有學生自己打開「存縮圖」開關並按「存這一筆」時，才另存於該資料集裡</td><td>只有你自己匯出該資料集並分享時才會離開裝置</td></tr>
+<tr><td>學生改過的 Python 程式與少量設定</td><td>在裝置上執行程式、看正確率與混淆矩陣，以及儲存 App 設定</td><td>不會</td></tr></table>
+
+<h2>1. 相機權限與影像處理</h2>
+<ul><li><strong>何時請求權限</strong>：只有進入需要使用相機的實驗時，App 才會請求相機權限（前、後鏡頭都可切換）。拒絕相機權限後，仍可使用內建樣本資料與教學。</li>
+<li><strong>即時轉成特徵</strong>：App 用 Apple 的 Vision 框架在裝置上即時把相機畫面變成特徵——包含手部關鍵點座標、臉的位置與眼距、辨識出的文字、影像特徵向量、人物框的位置。</li>
+<li><strong>不存原始影像、不上傳</strong>：相機畫面只在裝置上即時計算，不錄影、不拍照存檔、不上傳。</li>
+<li><strong>「打開設定」按鈕</strong>：App 內的「打開設定」按鈕只會開啟系統設定，讓使用者自行開啟相機權限。</li></ul>
+
+<h2>2. 臉部資料</h2>
+<p>「刷牙分區」單元使用 Apple 的 Vision 框架偵測臉的位置，只在裝置上即時計算。如果學生按「存這一筆」，存下的只有幾個數字（臉中心座標、眼距、手的座標、手移動量）和標籤，<strong>不存臉部影像</strong>，這些數字不能用來辨識是誰；不上傳、不分享，也不用於其他用途。</p>
+
+<h2>3. 存下來的資料與「存縮圖」例外</h2>
+<ul><li><strong>按「存這一筆」才儲存</strong>：只有學生自己按「存這一筆」時，App 才把那一刻的特徵數字和標籤存進資料集；手寫板則存 8×12 格子的數值。App 不存原始影像。</li>
+<li><strong>唯一例外（96×96 小縮圖）</strong>：在「自己的分類器」單元裡，只有當學生自己打開「存縮圖」開關（預設關閉）時，才會另存一張 96×96 的小縮圖在資料集裡。App 會提醒學生不要拍人臉、不要拍別人。</li>
+<li><strong>車牌單元與個資倫理</strong>：「教 AI 認字」單元只用印有「練習用」的合成假車牌；專題頁會討論個資倫理（車牌屬可間接識別個人的資料）。</li></ul>
+
+<h2>4. 存放處、上限與刪除方式</h2>
+<ul><li><strong>存在裝置沙盒</strong>：資料集、學生改過的程式、少量設定都存在 App 的沙盒裡（這支裝置），不使用 iCloud 同步，開發者也讀不到。</li>
+<li><strong>數量上限</strong>：每個單元最多 30 個資料集，每個資料集有樣本上限。</li>
+<li><strong>刪除資料</strong>：資料集可以逐一刪除，也可以在 App 裡按「全部刪除」（資料集、改過的程式、設定、匯出暫存檔一起刪）。刪除 App 即全部刪除。</li></ul>
+
+<h2>5. 匯出與匯入</h2>
+<ul><li><strong>匯出資料集</strong>：資料集可匯出成 CSV 或 JSON，透過系統分享選單由學生自己選擇存到哪裡、分享給誰（例如交給老師）。</li>
+<li><strong>匯入資料集</strong>：可從「檔案」匯入 JSON、CSV 或純文字資料集（例如老師發的標註資料）；匯入的檔案會檢查格式、限制大小（8 MB）與筆數，「自己的分類器」以外單元的縮圖會被丟掉。</li></ul>
+
+<h2>6. 不連網與執行環境</h2>
+<p>Python 執行環境（Pyodide）與編輯器都內建在 App 裡，網頁層的安全設定禁止連到任何外部網址；App 沒有任何連網功能、沒有伺服器。</p>
+<p><strong>準確度說明</strong>：App 內的判斷結果是學生自己寫的規則或簡單模型算出來的，僅供學習，可能因光線、角度、距離而出錯。</p>
+
+<h2>7. 兒童與學生隱私</h2>
+<p>本 App 供國高中生學習判別式 AI 使用。App 不需要帳號、不登入，不收集、不儲存也不傳送姓名、聯絡方式或任何可識別個人的資料。所有練習資料都只存在這支裝置上，只有在學生自己使用系統分享選單匯出時，才會交給學生所選的對象（例如老師）。</p>
+
+<h2>8. 政策變更與聯絡方式</h2>
+<p>本政策如有變更，會更新本頁並修改上方的生效日期。如有任何問題或建議，請寄信至 <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>（開發者：Henry Chao）。</p>
+<p>需要操作說明或常見問題解答，請參閱<a href="support.html">「AI 實驗室」使用說明與支援</a>。</p>
+</main></body></html>
