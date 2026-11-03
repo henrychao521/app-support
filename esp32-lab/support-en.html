@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESP32 AI Lab Support</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main>
+<p class="meta" style="text-align:right"><a href="support.html">繁體中文</a>｜English</p><h1>ESP32 AI Lab — Support</h1>
+<p class="meta">Applies to: the iPhone/iPad app “ESP32 AI Lab” (Chinese name ESP32 AI 實驗室, bundle ID tw.livingtech.esp32lab)　Effective: November 3, 2026　Developer: Henry Chao (individual)</p>
+<h2>About the app</h2>
+<p>Write MicroPython on an iPhone or iPad and run it on an ESP32 board instantly. Made for middle and high school technology and computing classes and self-study.</p>
+<ul><li><strong>Devices</strong>: connect by board name (e.g. esp32lab-7f2a.local) or IP; see signal, version and memory.</li>
+<li><strong>Examples</strong>: built-in example programs you can run on a board or in the simulator with one tap.</li>
+<li><strong>Code / Paste</strong>: a line-numbered editor. Code pasted back from a chat AI is cleaned up, syntax-checked and screened before it runs for patterns that would disconnect the board or make it unstoppable (such as connecting to Wi-Fi in user code, <code>while True</code>, or re-initializing the display).</li>
+<li><strong>Console and Remote</strong>: board output and errors; joystick, buttons and sliders to control the board.</li>
+<li><strong>Vision</strong>: on-device recognition of gestures, faces, poses and objects with the camera, sending results to the board; Teachable Machine models are supported.</li>
+<li><strong>Circuit simulator</strong>: practice without a board. Drag LEDs, buttons, sensors and displays onto a breadboard, wire them up and run your code; a multimeter measures voltage and current.</li>
+<li><strong>Teacher</strong>: connect to a classroom server on the teacher’s computer to see every board in class and update them all at once.</li></ul>
+
+<h2>Getting started</h2>
+<ol><li>No board: open the Circuit Simulator from the Devices tab, or pick an example on the Examples tab.</li>
+<li>With a board: on a computer, open the <a href="https://henrychao521.github.io/esp32-ai-lab-web/">first-flash website</a> in Chrome and flash MicroPython and the agent over USB, then set up Wi-Fi.</li>
+<li>Join the iPhone and the board to the same Wi-Fi and enter the board name on the Devices tab. Allow Local Network access when asked.</li></ol>
+
+<h2>Supported boards</h2>
+<p>ESP32, ESP32-S2, ESP32-S3 (including LILYGO T-QT Pro, T-Display S3 and Seeed XIAO ESP32S3 Sense), ESP32-C3, ESP32-C6, ESP32-CAM and more. See the first-flash website for the current list.</p>
+
+<h2>FAQ</h2>
+<p><strong>Can’t reach the board?</strong> Make sure both are on the same Wi-Fi (guest networks often isolate devices), turn on this app under Settings → Privacy &amp; Security → Local Network, or use the IP shown on the board’s screen.</p>
+<p><strong>The program hangs?</strong> Tap Stop in the console, and write loops as <code>while lab.running():</code> with <code>lab.sleep(seconds)</code> so Stop can interrupt them (all examples do this).</p>
+<p><strong>Does it cost anything? Ads?</strong> Free, no ads, no in-app purchases, no account.</p>
+<p><strong>Is my data uploaded?</strong> No. See the <a href="privacy-en.html">privacy policy</a>.</p>
+
+<h2>Contact</h2>
+<p>Send bug reports or suggestions to <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a> with the app version, device model and board model.</p>
+</main></body></html>

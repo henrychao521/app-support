@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESP32 AI 實驗室 隱私權政策</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main>
+<p class="meta" style="text-align:right">繁體中文｜<a href="privacy-en.html">English</a></p><h1>「ESP32 AI 實驗室」App 隱私權政策</h1>
+<p class="meta">適用：iPhone／iPad App「ESP32 AI 實驗室」（英文名 ESP32 AI Lab，套件識別碼 tw.livingtech.esp32lab）　生效日期：2026 年 11 月 3 日　開發者：Henry Chao（個人）</p>
+<p>「ESP32 AI 實驗室」是給學生學習 ESP32 開發板程式設計的 App：在 iPhone／iPad 上寫或貼上 MicroPython 程式，送到同一個 Wi-Fi 裡、已裝好本專案代理程式的 ESP32 板子執行，看輸出、遙控、做視覺辨識；沒有板子時也可以用 App 內建的離線電路模擬器練習。</p>
+<p><strong>開發者沒有伺服器，App 不需要帳號、不登入，沒有廣告，也沒有分析或追蹤 SDK。App 不收集、不上傳、不販售、不與第三方分享任何資料，開發者讀不到使用者的資料。</strong>App 的連線只發生在你自己指定的對象之間（同一個區域網路裡的板子與老師電腦），以下逐項說明。</p>
+
+<h2>總覽</h2>
+<table><tr><th>資料</th><th>用途</th><th>會離開裝置嗎</th></tr>
+<tr><td>程式碼、貼上區內容</td><td>編輯、檢查語法、送到板子執行</td><td>只送到你連線的 ESP32 板子（區域網路內）</td></tr>
+<tr><td>相機即時畫面</td><td>用 Apple 的 Vision 與 Core ML 在裝置上辨識手勢、人臉位置、姿勢或物件；不錄影、不拍照存檔</td><td>畫面不會離開裝置；只有辨識結果（標籤、分數、框的位置）送到你連線的板子</td></tr>
+<tr><td>板子位址、最近連過的板子、教室伺服器位址與班級通行碼</td><td>下次開 App 不必重打</td><td>位址與通行碼只送到老師電腦上的教室伺服器（區域網路內）</td></tr>
+<tr><td>遙控、感測器數值、板子輸出</td><td>遙控板子、在主控台顯示輸出</td><td>只在 App 與你連線的板子之間傳送</td></tr></table>
+
+<h2>1. 區域網路權限</h2>
+<ul><li>App 需要「區域網路」權限，才能找到並連線同一個 Wi-Fi 裡的 ESP32 板子（送程式、看輸出、遙控），以及老師電腦上的教室伺服器（看全班板子、一鍵更新）。</li>
+<li>這些連線都直接在區域網路內完成，不經過開發者的伺服器（開發者沒有伺服器）。拒絕這個權限後，仍可使用範例、程式編輯器與離線電路模擬器。</li></ul>
+
+<h2>2. 相機權限與影像處理</h2>
+<ul><li>只有進入「視覺」頁並開始辨識時才會請求相機權限。</li>
+<li>相機畫面只在裝置上即時計算，不錄影、不存檔、不上傳。送到板子的只有辨識結果（例如「比讚 0.92」與框的位置），讓板子依結果亮燈、顯示文字。</li>
+<li>拒絕相機權限後，仍可用「測試圖片」示範辨識，其他功能不受影響。</li></ul>
+
+<h2>3. 自訂辨識模型（選用）</h2>
+<p>「視覺」頁可以輸入一個網址，下載你自己在 Teachable Machine 訓練並匯出的 Core ML 模型。App 只會連到你輸入的網址下載這個檔案，不會把任何資料傳到該網址；模型下載後只在裝置上使用。</p>
+
+<h2>4. 電路模擬器</h2>
+<p>電路模擬器（元件、麵包板、MicroPython 與 ESP32 模擬核心）全部打包在 App 裡，離線執行，不連網、不傳送任何資料。</p>
+
+<h2>5. 和對話式 AI 搭配使用</h2>
+<p>App 提供可複製的提示範本，讓學生自己到 Gemini、ChatGPT 等對話式 AI 討論程式，再把程式碼貼回 App。App 本身不連到任何 AI 服務；學生在那些服務輸入的內容，適用各服務自己的隱私權政策。</p>
+
+<h2>6. 存放處與刪除方式</h2>
+<ul><li>程式碼、貼上區內容、最近連過的板子、教室伺服器位址與通行碼，存在這支裝置的 App 設定裡，不使用 iCloud 同步。</li>
+<li>程式編輯器可以一鍵清除所有程式碼；刪除 App 即刪除全部資料。</li></ul>
+
+<h2>7. 兒童與學生隱私</h2>
+<p>本 App 供國高中生在課堂或家裡學習使用。App 不需要帳號，不收集姓名、聯絡方式或任何可識別個人的資料。板子名稱是板子自動產生的代號（例如 esp32lab-7f2a），不含個資。</p>
+
+<h2>8. 政策變更與聯絡方式</h2>
+<p>本政策如有變更，會更新本頁並修改上方的生效日期。如有任何問題，請寄信至 <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>（開發者：Henry Chao）。</p>
+<p>操作說明與常見問題請見<a href="support.html">「ESP32 AI 實驗室」使用說明與支援</a>。</p>
+</main></body></html>

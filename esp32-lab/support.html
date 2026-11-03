@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESP32 AI 實驗室 支援</title><style>:root{--bg:#fbfaf7;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e0d8;--acc:#0a7d5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#ececec;--mut:#a0a0a0;--line:#2e2e2e;--acc:#4fd1a5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:32px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+ul{padding-left:1.2em}</style></head><body><main>
+<p class="meta" style="text-align:right">繁體中文｜<a href="support-en.html">English</a></p><h1>「ESP32 AI 實驗室」使用說明與支援</h1>
+<p class="meta">適用：iPhone／iPad App「ESP32 AI 實驗室」（英文名 ESP32 AI Lab，套件識別碼 tw.livingtech.esp32lab）　生效日期：2026 年 11 月 3 日　開發者：Henry Chao（個人）</p>
+<h2>App 簡介</h2>
+<p>在 iPhone／iPad 上寫 MicroPython，送到 ESP32 板子立刻看到結果。適合國高中生活科技、資訊課與自主學習。</p>
+<ul><li><strong>裝置</strong>：輸入板子名稱（例如 esp32lab-7f2a.local）或 IP 連線，看訊號、版本、記憶體。</li>
+<li><strong>範例</strong>：內建範例程式，一鍵送到板子或模擬器，先看到結果再改。</li>
+<li><strong>程式／貼上</strong>：行號編輯器；從對話式 AI 貼回的程式會自動清理格式、檢查語法，並在執行前提醒會讓板子失聯或停不下來的寫法（例如程式自己連 Wi-Fi、<code>while True</code>、自己初始化螢幕）。</li>
+<li><strong>主控台、遙控</strong>：看板子輸出與錯誤；搖桿、按鈕、滑桿遙控板子。</li>
+<li><strong>視覺</strong>：用 iPhone 鏡頭在裝置上辨識手勢、人臉、姿勢、物件，結果送到板子；也能載入 Teachable Machine 模型。</li>
+<li><strong>電路模擬器</strong>：沒有板子也能練習。把 LED、按鈕、感測器、螢幕等元件拉到麵包板上接線，執行程式看結果；附電表可量電壓電流。</li>
+<li><strong>老師</strong>：連到老師電腦上的教室伺服器，看全班板子、一鍵更新代理程式。</li></ul>
+
+<h2>開始使用</h2>
+<ol><li>沒有板子：直接打開「裝置」頁的「電路模擬器」或「範例」頁，選一支範例執行。</li>
+<li>有板子：先用電腦 Chrome 打開<a href="https://henrychao521.github.io/esp32-ai-lab-web/">首燒網站</a>，用 USB 幫板子燒好 MicroPython 與代理程式並設定 Wi-Fi。</li>
+<li>iPhone 和板子連同一個 Wi-Fi，在「裝置」頁輸入板子名稱連線；第一次會詢問區域網路權限，請允許。</li></ol>
+
+<h2>支援的板子</h2>
+<p>ESP32、ESP32-S2、ESP32-S3（含 LILYGO T-QT Pro、T-Display S3、Seeed XIAO ESP32S3 Sense）、ESP32-C3、ESP32-C6、ESP32-CAM 等。實際支援清單以首燒網站為準。</p>
+
+<h2>常見問題</h2>
+<p><strong>連不到板子？</strong>確認手機和板子在同一個 Wi-Fi（學校訪客網路常會隔離裝置）、到「設定 → 隱私權與安全性 → 區域網路」打開本 App，或改用板子螢幕上顯示的 IP。</p>
+<p><strong>程式一執行就卡住？</strong>按主控台的「停止」；迴圈用 <code>while lab.running():</code>、等待用 <code>lab.sleep(秒)</code>，停止鍵才管得到（範例程式都是這樣寫）。</p>
+<p><strong>App 要錢嗎？有廣告嗎？</strong>免費、無廣告、無 App 內購買、不需要帳號。</p>
+<p><strong>資料會上傳嗎？</strong>不會，詳見<a href="privacy.html">隱私權政策</a>。</p>
+
+<h2>聯絡我們</h2>
+<p>問題回報或建議請寄 <a href="mailto:henrychao521@gmail.com">henrychao521@gmail.com</a>，請附上 App 版本、裝置型號與板子型號。</p>
+</main></body></html>
