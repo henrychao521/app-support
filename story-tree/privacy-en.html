@@ -6,14 +6,14 @@ main{max-width:720px;margin:0 auto;padding:40px 16px 80px}h1{font-size:28px;marg
 .meta{color:var(--mut);font-size:14px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
 ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-align:right"><a href="privacy.html">繁體中文</a>｜English</p>
 <h1>Banyan Tree Stories — Privacy Policy</h1>
-<p class="meta">App: “大榕樹故事” (Banyan Tree Stories) for iOS　Effective: November 21, 2026　Developer: Henry Chao (individual)</p>
+<p class="meta">App: “大榕樹故事” (Banyan Tree Stories) for iOS　Effective: November 24, 2026　Developer: Henry Chao (individual)</p>
 <p>Banyan Tree Stories is a story and bedtime white-noise app for children aged 3–6. Stories bundled with the app play without a network connection; new or updated stories are downloaded from the developer's own server and then also play offline.</p>
-<p><strong>No account or sign-in, no ads, no third-party analytics, tracking or advertising SDKs, and no iCloud sync. Favorites, listening history and settings stay on the device.</strong> The only feature that sends data is “Anonymous listening statistics”, which is <strong>off by default</strong> and can only be turned on by a parent in the Parents area. Downloading stories sends no personal data.</p>
+<p><strong>No account or sign-in, no ads, no third-party analytics, tracking or advertising SDKs, and no iCloud sync. Favorites, listening history and settings stay on the device.</strong> The only feature that sends data is “Anonymous listening statistics”, which is <strong>off by default</strong> and can only be turned on by a parent in the Parents area. Downloading stories sends no personal data; the server only counts how many times each story is downloaded, without knowing who downloaded it.</p>
 <h2>Overview</h2>
 <table><tr><th>Data / feature</th><th>Purpose</th><th>Leaves the device?</th></tr>
 <tr><td>Favorites, recently played, resume position</td><td>Continue listening, find favorite stories</td><td>No (stored on device only)</td></tr>
 <tr><td>Preferences (appearance, timers, white noise)</td><td>Remember your settings</td><td>No (stored on device only)</td></tr>
-<tr><td>Downloading the story catalog, audio and illustrations</td><td>Add and update stories without an app update</td><td>Files are downloaded from the developer's server; no personal data is sent</td></tr>
+<tr><td>Downloading the story catalog, audio and illustrations</td><td>Add and update stories without an app update</td><td>Files are downloaded from the developer's server; no personal data is sent; the server only keeps a total download count per story</td></tr>
 <tr><td>Anonymous listening statistics (off by default)</td><td>Learn which stories children finish, skip, or may find unsuitable, so we can improve the content</td><td>Only after a parent turns it on; only anonymous per-story totals</td></tr>
 <tr><td>Parent report “not suitable / my child didn't like it”</td><td>Improve story content</td><td>One anonymous count when the parent taps Send</td></tr></table>
 <h2>1. Anonymous listening statistics (parent opt-in)</h2>
@@ -26,6 +26,7 @@ ul{padding-left:1.2em}</style></head><body><main><p class="meta" style="text-ali
 <h2>2. Downloading story content</h2>
 <ul><li>The app periodically checks the developer's own server on Cloudflare (content.henrylivingtech.com) for the story catalog and downloads new or updated story audio and illustrations, which are then stored on the device and play offline.</li>
 <li>No name, account, device identifier or other personal data is sent; the server does not keep IP addresses or connection logs. Only the developer's own server is contacted, never a third-party service.</li>
+<li><strong>Download counts per story (from November 24, 2026):</strong> each time a story's audio is downloaded, the server adds 1 to that story's count for the day. It stores only “date, story, count”, with region limited to “Taiwan” or “other” (the country is derived from the connection and only this two-way label is kept; IP addresses are not stored). No device, account, time of day or anything that could identify a person is recorded, and nothing is shared with third parties. The counts are used only to see which stories are popular and decide what kinds of stories to make next.</li>
 <li>If paid stories are offered in the future: when downloading a purchased story, the app sends Apple's transaction ID to the developer's server, which asks Apple to confirm the purchase before allowing the download. The transaction ID contains no name, Apple Account or payment details and is not stored.</li></ul>
 <h2>3. Data stored on the device</h2>
 <p>Favorites, recently played stories, resume position, play counts and settings stay in the app's storage on this device, are not synced via iCloud, and cannot be read by the developer. Clear them in Settings; deleting the app removes everything.</p>
